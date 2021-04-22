@@ -17,11 +17,6 @@
     user-select: none;
 }
 
-.btn {
-    background-color: transparent;
-    margin-right: 5px;
-}
-
 .btn-star:focus {
     box-shadow: none;
     border: 1px solid transparent;
