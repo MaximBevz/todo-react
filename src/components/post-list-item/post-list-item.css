@@ -1,0 +1,57 @@
+.app-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.app-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.app-list-item-label {
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+}
+
+.btn {
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+.btn-star:focus {
+    box-shadow: none;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.btns-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-star {
+    color: gold;
+}
+
+.fa-heart {
+    opacity: 0;
+    color: crimson;
+    transition: 0.4s all ease;
+}
+
+.important {
+    color: gold;
+}
+
+.important .btn-star {
+    color: black;
+}
+
+.like .fa-heart {
+    opacity: 1;
+}
