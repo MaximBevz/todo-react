@@ -1,28 +1,10 @@
 import React, {Component} from 'react';
-import './post-list-item.css';
+import './post-list-item.scss';
 
 export default class PostListItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            important: false,
-            like: false
-        }
-        this.onImportant = () => {
-            this.setState(({important}) => ({
-                important: !important
-            }))
-        }
-        this.onLike = () => {
-            this.setState(({like}) => ({
-                like: !like
-            }))
-        }
-    }
 
     render() {
-        const {label} = this.props;
-        const {important, like} = this.state;
+        const {label, onDelete, onToggleImportant, onToggleLike, important, like} = this.props;
 
         let classNames = 'app-list-item';
         if(important) {
@@ -35,17 +17,20 @@ export default class PostListItem extends Component {
 
         return (
             <div className={classNames}>
-            <span onDoubleClick={this.onLike} className="app-list-item-label">
+            <span onDoubleClick={onToggleLike} className="app-list-item-label">
                 {label}
             </span>
                 <div className="btns-group">
                     <button
                         className="btn btn-star"
-                        onClick={this.onImportant}
+                        onClick={onToggleImportant}
                     >
                         <i className="fa fa-star"></i>
                     </button>
-                    <button className="btn btn-trash">
+                    <button
+                        className="btn btn-trash"
+                        onClick={onDelete}
+                    >
                         <i className="fas fa-trash"></i>
                     </button>
                     <i className="fa fa-heart"></i>

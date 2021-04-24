@@ -5,22 +5,14 @@
     background-color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
-}
-
-.app-list-item:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.app-list-item-label {
-    cursor: pointer;
-    width: 100%;
-    user-select: none;
-}
-
-.btn-star:focus {
-    box-shadow: none;
-    border: 1px solid transparent;
-    outline: none;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &-label {
+        cursor: pointer;
+        width: 100%;
+        user-select: none;
+      }
 }
 
 .btns-group {
@@ -31,6 +23,11 @@
 
 .btn-star {
     color: gold;
+    &:focus {
+        box-shadow: none;
+        border: 1px solid transparent;
+        outline: none;
+    }
 }
 
 .fa-heart {
@@ -41,10 +38,9 @@
 
 .important {
     color: gold;
-}
-
-.important .btn-star {
-    color: black;
+    & .btn-star {
+        color: black;
+    }
 }
 
 .like .fa-heart {

@@ -1,0 +1,25 @@
+.btn-filter {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: silver;
+}
+
+.btn-all {
+    background-color: silver;
+    margin-right: 5px;
+    &:hover {
+        background-color: #457f81;
+    }
+}
+
+.btn-like {
+    &:hover {
+        background-color: cadetblue;
+    }
+}
+
+.active {
+    background-color: cadetblue;
+}
